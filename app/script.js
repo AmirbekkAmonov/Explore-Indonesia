@@ -26,3 +26,4 @@ function currentSlide(n) {
 
 // Karuselni boshlang‘ich holatiga o‘rnatish
 showSlide(currentSlideIndex);
+

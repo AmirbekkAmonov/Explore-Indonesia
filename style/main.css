@@ -562,4 +562,204 @@ body, html {
   bottom: -300px;
   right: -150px;
   background-image: url("../assets/imgs/Whangaehu.png");
+}
+
+.experience-section {
+  position: relative;
+  text-align: center;
+  background: url("../assets/imgs/video_img.png") no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  color: #ffffff;
+}
+.experience-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(221, 89%, 7%, 0.8);
+  z-index: -1;
+}
+.experience-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.experience-section .main-video {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.experience-section .main-video img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.experience-section .main-video .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #ff0055;
+  background-color: hsla(340, 100%, 50%, 0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.experience-section .main-video .play-button img {
+  width: 30px;
+}
+.experience-section .info-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.experience-section .info-boxes .info-box {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+}
+.experience-section .info-boxes .info-box img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.experience-section .info-boxes .info-box .text h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.experience-section .info-boxes .info-box .text p {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.photo-gallery-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+.photo-gallery-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.photo-gallery-section p {
+  font-size: 1rem;
+  color: #666666;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.photo-gallery-section .gallery-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  max-width: 800px;
+  margin: 0 auto;
+}
+.photo-gallery-section .gallery-grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #0d1b2a;
+  color: #ffffff;
+  padding: 20px 40px;
+  position: relative;
+}
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer .footer-content .footer-logo {
+  display: flex;
+  align-items: center;
+}
+.footer .footer-content .footer-logo img {
+  width: 30px;
+  height: auto;
+  margin-right: 8px;
+}
+.footer .footer-content .footer-logo span {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.footer .footer-content .footer-logo strong {
+  color: #e63946;
+}
+.footer .footer-content .footer-nav {
+  display: flex;
+  gap: 20px;
+}
+.footer .footer-content .footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.footer .footer-content .footer-nav a:hover {
+  color: #e63946;
+}
+.footer .footer-content .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer .footer-content .footer-social a {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.footer .footer-content .footer-social a:hover {
+  color: #e63946;
+}
+.footer .footer-content .footer-social span {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.footer .back-to-top {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  background-color: #e63946;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+.footer .back-to-top:hover {
+  background-color: #d62828;
 }/*# sourceMappingURL=main.css.map */
