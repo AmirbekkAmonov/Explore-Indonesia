@@ -1,0 +1,67 @@
+.hills-and-valleys {
+    position: relative;
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+        z-index: 1;
+        position: relative;
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #666666;
+        }
+
+        button {
+            background-color: #ff0055;
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #e6004e;
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &::before {
+        top: -300px;
+        left: -150px;
+        background-image: url('../assets/imgs/Whangaehu.png'); // Replace with actual left image path
+    }
+
+    &::after {
+        transform: rotate(180deg);
+        bottom: -300px;
+        right: -150px;
+        background-image: url('../assets/imgs/Whangaehu.png'); // Replace with actual right image path
+    }
+}
