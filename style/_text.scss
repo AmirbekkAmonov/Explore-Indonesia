@@ -1,0 +1,107 @@
+.timeline-section {
+    background-color: #e9f2fa;
+    padding: 40px;
+    font-family:$font-primary;
+
+    h2 {
+        text-align: start;
+        margin-left: 250px;
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+
+    .timeline {
+        position: relative;
+        margin: 0 auto;
+        padding-left: 30px;
+        max-width: 800px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 75%;
+            width: 2px;
+            background-color: #ced4da;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            position: relative;
+
+            .timeline-icon {
+                width: 40px;
+                height: 40px;
+                background-color: #d50000;
+                color: #ffffff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                font-weight: bold;
+                position: absolute;
+                left: -28px;
+                top: 0;
+            }
+
+            .timeline-content {
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                margin-left: 40px;
+                width: 100%;
+
+                h3 {
+                    margin-top: 0;
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                }
+
+                .sub-content {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 15px;
+
+                    img {
+                        width: 100px;
+                        height: auto;
+                        margin-right: 10px;
+                        border-radius: 4px;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 0.9rem;
+                        strong {
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .learn-more {
+                    background-color: #d50000;
+                    color: #ffffff;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    font-size: 0.9rem;
+                    cursor: pointer;
+                    margin-top: 10px;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: #c20000;
+                    }
+                }
+            }
+        }
+    }
+}

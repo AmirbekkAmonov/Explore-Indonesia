@@ -23,11 +23,13 @@
 
             span {
                 font-size: 1.2rem;
-                color: #ffffff;
+                display: flex;
+                color: #e63946; 
+                flex-direction: column;
             }
-
+            
             strong {
-                color: #e63946; // Highlight color for "INDONESIA"
+                color: #ffffff;
             }
         }
 
@@ -41,7 +43,7 @@
                 font-size: 0.9rem;
 
                 &:hover {
-                    color: #e63946; // Hover color
+                    color: #e63946; 
                 }
             }
         }
@@ -69,14 +71,14 @@
 
     .back-to-top {
         position: absolute;
-        top: -20px;
-        right: 20px;
-        background-color: #e63946; // Red color for the button
+        top: -35px;
+        right: 40px;
+        background-color: #e63946; 
         color: #ffffff;
         border: none;
         border-radius: 50%;
-        width: 40px;
-        height: 40px;
+        width: 70px;
+        height: 70px;
         font-size: 1.2rem;
         cursor: pointer;
         display: flex;
@@ -84,6 +86,10 @@
         justify-content: center;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         transition: background-color 0.3s;
+        img {
+            width: 30px;
+            height: auto;
+        }
 
         &:hover {
             background-color: #d62828;

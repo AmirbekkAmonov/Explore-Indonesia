@@ -13,6 +13,7 @@
 
 .header {
   width: 100%;
+  margin: 0 auto;
   height: 100vh;
   padding: 10px;
   background-image: url(../assets/imgs/hero_img.png);
@@ -178,7 +179,7 @@
   transform: rotate(-90deg);
   gap: 40px;
   margin-top: 140px;
-  margin-left: -50px;
+  margin-left: -25px;
 }
 .header .info-section-text a {
   color: #fff;
@@ -657,9 +658,10 @@ body, html {
   padding: 60px 20px;
 }
 .photo-gallery-section h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   margin-bottom: 10px;
+  font-family: "DM Sans", sans-serif;
 }
 .photo-gallery-section p {
   font-size: 1rem;
@@ -668,21 +670,175 @@ body, html {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  font-family: "DM Sans", sans-serif;
 }
 .photo-gallery-section .gallery-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  max-width: 800px;
-  margin: 0 auto;
-}
-.photo-gallery-section .gallery-grid img {
   width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  margin-left: 150px;
+  margin-bottom: 150px;
+  height: 80vh;
+  font-size: 30px;
+  color: white;
+  padding: 20px 0;
+  font-weight: bold;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  grid-template-areas: "bir uch besh" "bir uch besh" "bir tort besh" "bir tort olti" "ikki tort olti" "ikki tort olti";
+  gap: 20px;
+  justify-items: center; /* Elementlarni gorizontal markazda joylash */
+  align-items: center;
+}
+.photo-gallery-section .gallery-grid .bir {
+  width: 350px;
+  height: 500px;
+  grid-area: bir;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.photo-gallery-section .gallery-grid .ikki {
+  width: 350px;
+  height: 200px;
+  grid-area: ikki;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.photo-gallery-section .gallery-grid .uch {
+  width: 350px;
+  height: 200px;
+  grid-area: uch;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  grid-area: uch;
+}
+.photo-gallery-section .gallery-grid .tort {
+  width: 350px;
+  height: 500px;
+  grid-area: tort;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.photo-gallery-section .gallery-grid .besh {
+  width: 350px;
+  height: 350px;
+  grid-area: besh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.photo-gallery-section .gallery-grid .olti {
+  width: 350px;
+  height: 350px;
+  grid-area: olti;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-section {
+  background-color: #e9f2fa;
+  padding: 40px;
+  font-family: "DM Sans", sans-serif;
+}
+.timeline-section h2 {
+  text-align: start;
+  margin-left: 250px;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+.timeline-section .timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 30px;
+  max-width: 800px;
+}
+.timeline-section .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 75%;
+  width: 2px;
+  background-color: #ced4da;
+}
+.timeline-section .timeline .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  position: relative;
+}
+.timeline-section .timeline .timeline-item .timeline-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #d50000;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  left: -28px;
+  top: 0;
+}
+.timeline-section .timeline .timeline-item .timeline-content {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left: 40px;
+  width: 100%;
+}
+.timeline-section .timeline .timeline-item .timeline-content h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.timeline-section .timeline .timeline-item .timeline-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.timeline-section .timeline .timeline-item .timeline-content .sub-content {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.timeline-section .timeline .timeline-item .timeline-content .sub-content img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+.timeline-section .timeline .timeline-item .timeline-content .sub-content p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.timeline-section .timeline .timeline-item .timeline-content .sub-content p strong {
+  font-weight: bold;
+}
+.timeline-section .timeline .timeline-item .timeline-content .learn-more {
+  background-color: #d50000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+.timeline-section .timeline .timeline-item .timeline-content .learn-more:hover {
+  background-color: #c20000;
 }
 
 .footer {
@@ -709,10 +865,12 @@ body, html {
 }
 .footer .footer-content .footer-logo span {
   font-size: 1.2rem;
-  color: #ffffff;
+  display: flex;
+  color: #e63946;
+  flex-direction: column;
 }
 .footer .footer-content .footer-logo strong {
-  color: #e63946;
+  color: #ffffff;
 }
 .footer .footer-content .footer-nav {
   display: flex;
@@ -744,14 +902,14 @@ body, html {
 }
 .footer .back-to-top {
   position: absolute;
-  top: -20px;
-  right: 20px;
+  top: -35px;
+  right: 40px;
   background-color: #e63946;
   color: #ffffff;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   font-size: 1.2rem;
   cursor: pointer;
   display: flex;
@@ -759,6 +917,10 @@ body, html {
   justify-content: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
+}
+.footer .back-to-top img {
+  width: 30px;
+  height: auto;
 }
 .footer .back-to-top:hover {
   background-color: #d62828;
