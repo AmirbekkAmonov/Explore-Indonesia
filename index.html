@@ -1,246 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore-Indonesia</title>
-    <link rel="stylesheet" href="./style/main.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__nav">
-        <img src="./assets/imgs/logo.svg" alt="" />
-        <div class="header__nav-links">
-          <div class="header__nav-links--links">
-            <a href="#">destinations</a>
-            <a href="#">experiences</a>
-            <a href="#">about</a>
-            <a href="#">gallery</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/imgs/images.svg" type="image/x-icon">
+  <title>Explore-Indonesia</title>
+  <link rel="stylesheet" href="./style/main.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__nav">
+      <img src="./assets/imgs/logo.svg" alt="" />
+      <div class="header__nav-links">
+        <div class="header__nav-links--links">
+          <a href="#destinations">destinations</a>
+          <a href="#experiences">experiences</a>
+          <a href="#about">about</a>
+          <a href="#gallery">gallery</a>
+        </div>
+        <div class="header__nav-links--icon">
+          <img src="./assets/icons/search.svg"  alt="Qidiruv" class="search-icon" onclick="toggleSearch()"/>
+          <img src="./assets/icons/menu.svg" alt="" class="menu-button" onclick="toggleMenu()" />
+        </div>
+      </div>
+    </div>
+    <div class="search-bar-container">
+      <form action="https://www.google.com/search" method="get" target="_blank" id="searchForm">
+        <input type="text" class="search-bar" name="q" placeholder="Search..." onkeydown="hideSearchBarOnEnter(event)">
+      </form>
+    </div>
+    <div class="header__text">
+      <div class="header__text--line">
+        <div class="header__text--line2">
+          <div class="header__text--line3"></div>
+        </div>
+        <p>01</p>
+      </div>
+      <h1>Explore <br> Indonesia</h1>
+      <a href="/"><button>Start travelling</button></a>
+    </div>
+    <div class="info-section">
+      <div class="info-section-text">
+        <a href="htps://www.facebook.com">Fb</a>
+        <a href="htps://www.linkedin.com">In</a>
+        <a href="htps://www.twitter.com">Tw</a>
+      </div>
+      <div class="info-boxes">
+        <div class="info-box">
+          <h3>01 </h3>
+          <b>Title here</b>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="info-box">
+          <h3>02 </h3>
+          <b>Title here</b>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="info-box">
+          <h3>03 </h3>
+          <b>Title here</b>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="video-thumbnail">
+          <video src="./assets/imgs/3551454091-preview.mp4" controls muted></video>
+        </div>
+      </div>
+    </div>
+    <div class="side-menu">
+      <div class="side-menu-close" onclick="toggleMenu()">&times;</div>
+      <div class="side-menu-links">
+          <a href="#">Destinations</a>
+          <a href="#">Experiences</a>
+          <a href="#">About</a>
+          <a href="#">Gallery</a>
+      </div>
+  </div>  
+  </header>
+  <main>
+    <section class="hero" id="destinations">
+      <div class="background">
+        <div class="content">
+          <div class="image-container">
+            <img src="./assets/imgs/Rectangle 9.png" alt="Mountain Walkway">
           </div>
-          <div class="header__nav-links--icon">
-            <img src="./assets/icons/search.svg" alt="" />
-            <img src="./assets/icons/menu.svg" alt="" />
+          <div class="text-content">
+            <h2>The walkways of Indonesia spellbind</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero mollis rhoncus.
+            </p>
+            <button>Learn More</button>
           </div>
         </div>
       </div>
-      <div class="header__text">
-        <div class="header__text--line">
-            <div class="header__text--line2">
-                <div class="header__text--line3"></div>
-            </div>
-            <p>01</p>
-        </div>
-        <h1>Explore <br> Indonesia</h1>
-        <a href="/"><button>Start travelling</button></a>
-      </div>
-      <div class="info-section">
-        <div class="info-section-text">
-          <a href="htps://www.facebook.com">Fb</a>
-          <a href="htps://www.linkedin.com">In</a>
-          <a href="htps://www.twitter.com">Tw</a>
-        </div>
-        <div class="info-boxes">
-              <div class="info-box">
-                <h3>01 </h3>
-                <b>Title here</b>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="info-box">
-                <h3>02 </h3>
-                <b>Title here</b>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="info-box">
-                <h3>03 </h3>
-                <b>Title here</b>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="video-thumbnail">
-                <video src="./assets/imgs/3551454091-preview.mp4" controls muted></video>
-              </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="background">
-          <div class="content">
-            <div class="image-container">
-              <img src="./assets/imgs/Rectangle 9.png" alt="Mountain Walkway">
-            </div>
-            <div class="text-content">
-              <h2>The walkways of Indonesia spellbind</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero mollis rhoncus.</p>
-              <button>Learn More</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="backgroundd">
-          <div class="content">
-            <div class="text-content">
-              <h2>Perfect beaches exude relaxation and fun</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero mollis rhoncus.</p>
-              <button>Learn More</button>
-            </div>
-            <div class="image-container">
-              <img src="./assets/imgs/Rectangle 10.png" alt="Mountain Walkway">
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="carousel-section">
-        <div class="background-overlay"></div>
-        <h2>Explore Our Secrets</h2>
-        <div class="carousel">
-          <button class="carousel-control prev" onclick="moveSlide(-1)"><img src="./assets/icons/left-arrow.png" alt=""></button>
-          <div class="carousel-track">
-            <div class="slide"><img src="./assets/imgs/Rectangle 1258.png" alt="Image 1"></div>
-            <div class="slide"><img src="./assets/imgs/Rectangle 1259.png" alt="Image 2"></div>
-            <div class="slide"><img src="./assets/imgs/Rectangle 1260.png" alt="Image 3"></div>
-          </div>
-          <button class="carousel-control next" onclick="moveSlide(1)"><img src="./assets/icons/right-arrow.png" alt=""></button>
-        </div>
-        <div class="carousel-indicators">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-        <div class="by-the-numbers">
-          <h2>By The Numbers</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          
-          <div class="numbers">
-              <div class="number-item">
-                  <h3>100+</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</p>
-              </div>
-              <div class="number-item">
-                  <h3>43,000+</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo.</p>
-              </div>
-              <div class="number-item">
-                  <h3>30+</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</p>
-              </div>
-          </div>
-      </div>
-      
-      </section>
-      <section>
-        <div class="hills-and-valleys">
-          <div class="content">
-              <h2>Our hills and valleys are like nothing you’ve seen.</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus dolor sit amet, laoreet elit. Donec mauris tortor.</p>
-              <button>Learn More</button>
-          </div>
-      </div>      
-      </section>
-      <section>
-        <div class="experience-section">
-          <h2>Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.</h2>
-          
-          <div class="main-video">
-              <img src="./assets/imgs/Photo@2x.png" alt="Main video thumbnail">
-              <div class="play-button"><img src="./assets/icons/play.png" alt=""></div>
-          </div>
-          
-          <div class="info-boxes">
-              <div class="info-box">
-                  <img src="./assets/imgs/image 3.png" alt="In The Country">
-                  <div class="text">
-                      <h3>In The Country</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus.</p>
-                  </div>
-              </div>
-              <div class="info-box">
-                  <img src="./assets/imgs/image 4.png" alt="In The City">
-                  <div class="text">
-                      <h3>In The City</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus.</p>
-                  </div>
-              </div>
-          </div>
-      </div>      
-      </section>
-      <section>
-        <div class="photo-gallery-section">
-          <h2>Photo Gallery</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt arcu tincidunt.</p>
-      
-          <div class="gallery-grid">
-              <img class="bir" src="./assets/imgs/Image 01.png" alt="Image 1">
-              <img class="ikki" src="./assets/imgs/Image 02.png" alt="Image 2">
-              <img class="uch" src="./assets/imgs/Image 03.png" alt="Image 3">
-              <img class="tort" src="./assets/imgs/Image 04.png" alt="Image 4">
-              <img class="besh" src="./assets/imgs/Image 05.png" alt="Image 5">
-              <img class="olti" src="./assets/imgs/Image 06.png" alt="Image 6">
-          </div>
-      </div>
-      
-      </section>
-      <section class="timeline-section">
-        <h2>Getting there</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-icon">1</div>
-                <div class="timeline-content">
-                    <h3>Booking your flights</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
-                </div>
-            </div>
-    
-            <div class="timeline-item">
-                <div class="timeline-icon">2</div>
-                <div class="timeline-content">
-                    <h3>Choosing your hotel</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.</p>
-                    <div class="sub-content">
-                        <img src="./assets/imgs/Video.png" alt="Travelling">
-                        <p><strong>Travelling there</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="timeline-item">
-                <div class="timeline-icon">3</div>
-                <div class="timeline-content">
-                    <h3>Planning your experiences</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius.</p>
-                    <button class="learn-more">Learn More</button>
-                </div>
-            </div>
-        </div>
     </section>
-    
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-          <div class="footer-logo">
-              <img src="./assets/imgs/Group.svg" alt="Explore Indonesia Logo">
-              <div>
-                <span>EXPLORE <strong>INDONESIA</strong></span>
-              </div>
+    <section>
+      <div class="backgroundd">
+        <div class="content content-reverse">
+          <div class="text-content">
+            <h2>Perfect beaches exude relaxation and fun</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero mollis rhoncus.
+            </p>
+            <button>Learn More</button>
           </div>
-          
-          <nav class="footer-nav">
-              <a href="#">About</a>
-              <a href="#">Pricing</a>
-              <a href="#">Company</a>
-              <a href="#">Blog</a>
-          </nav>
-          
-          <div class="footer-social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-google"></i></a>
-              <span>Copyright © 2023</span>
+          <div class="image-container">
+            <img src="./assets/imgs/Rectangle 10.png" alt="Mountain Walkway">
           </div>
+        </div>
       </div>
-      
-      <button class="back-to-top" onclick="scrollToTop()"><img src="./assets/icons/up-arrow (1).png" alt=""></button>
+    </section>
+    <section class="carousel-section">
+      <div class="background-overlay"></div>
+      <h2>Explore Our Secrets</h2>
+      <div class="carousel">
+        <button class="carousel-control prev" onclick="moveSlide(-1)"><img src="./assets/icons/left-arrow.png"
+            alt=""></button>
+        <div class="carousel-track">
+          <div class="slide"><img src="./assets/imgs/Rectangle 1258.png" alt="Image 1"></div>
+          <div class="slide"><img src="./assets/imgs/Rectangle 1259.png" alt="Image 2"></div>
+          <div class="slide"><img src="./assets/imgs/Rectangle 1260.png" alt="Image 3"></div>
+        </div>
+        <button class="carousel-control next" onclick="moveSlide(1)"><img src="./assets/icons/right-arrow.png"
+            alt=""></button>
+      </div>
+      <div class="carousel-indicators">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      <div class="by-the-numbers">
+       <div class="by-the-numbers-text">
+        <h2>By The Numbers</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero. Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit.</p>
+
+       </div>
+        <div class="numbers">
+          <div class="number-item">
+            <h3>100+</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</p>
+          </div>
+          <div class="number-item">
+            <h3>43,000+</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo.</p>
+          </div>
+          <div class="number-item">
+            <h3>30+</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section >
+      <div class="hills-and-valleys">
+        <div class="content">
+          <h2>Our hills and valleys are like nothing you’ve seen.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus dolor sit
+            amet, laoreet elit. Donec mauris tortor.</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </section>
+    <section id="experiences">
+      <div class="experience-section">
+        <h2>Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.</h2>
+
+        <div class="main-video">
+          <img src="./assets/imgs/Photo@2x.png" alt="Main video thumbnail">
+          <div class="play-button"><img src="./assets/icons/play.png" alt=""></div>
+        </div>
+
+        <div class="info-boxes">
+          <div class="info-box">
+            <img src="./assets/imgs/image 3.png" alt="In The Country">
+            <div class="text">
+              <h3>In The Country</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus.</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="./assets/imgs/image 4.png" alt="In The City">
+            <div class="text">
+              <h3>In The City</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="gallery">
+      <div class="photo-gallery-section">
+        <h2>Photo Gallery</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget
+          tincidunt arcu tincidunt.</p>
+
+        <div class="gallery-grid">
+          <img class="bir" src="./assets/imgs/Image 01.png" alt="Image 1">
+          <img class="ikki" src="./assets/imgs/Image 02.png" alt="Image 2">
+          <img class="uch" src="./assets/imgs/Image 03.png" alt="Image 3">
+          <img class="tort" src="./assets/imgs/Image 04.png" alt="Image 4">
+          <img class="besh" src="./assets/imgs/Image 05.png" alt="Image 5">
+          <img class="olti" src="./assets/imgs/Image 06.png" alt="Image 6">
+        </div>
+      </div>
+
+    </section>
+    <section class="timeline-section" id="about">
+      <h2>Getting there</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">1</div>
+          <div class="timeline-content">
+            <h3>Booking your flights</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget
+              tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra
+              neque auctor, lobortis enim.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">2</div>
+          <div class="timeline-content">
+            <h3>Choosing your hotel</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget
+              tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra
+              neque auctor, lobortis enim.</p>
+            <div class="sub-content">
+              <img src="./assets/imgs/Video.png" alt="Travelling">
+              <p><strong>Travelling there</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                dapibus mauris in lectus tempus, eget tincidunt.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">3</div>
+          <div class="timeline-content">
+            <h3>Planning your experiences</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget
+              tincidunt lacus varius.</p>
+            <button class="learn-more">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="./assets/imgs/Group.svg" alt="Explore Indonesia Logo">
+        <div>
+          <span>EXPLORE <strong>INDONESIA</strong></span>
+        </div>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="#">About</a>
+        <a href="#">Pricing</a>
+        <a href="#">Company</a>
+        <a href="#">Blog</a>
+      </nav>
+
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"><img src="./assets/icons/facebook.svg" alt=""></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"> <img src="./assets/icons/linkedin.svg" alt=""></i></a>
+        <a href="#"><i class="fab fa-google"> <img src="./assets/icons/google.svg" alt=""></i></a>
+        <span>Copyright © 2023</span>
+      </div>
+    </div>
   </footer>
-    <script src="./app/script.js"></script>
-  </body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <img src="./assets/icons/up-arrow (1).png" alt="Up Arrow">
+</button>
+  <script src="./app/script.js"></script>
+</body>
+
 </html>

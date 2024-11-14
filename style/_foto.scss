@@ -1,22 +1,26 @@
 .photo-gallery-section {
     text-align: center;
     padding: 60px 20px;
+    background-color: #FFFFFF;
 
     h2 {
         font-size: 3rem;
         font-weight: 600;
         margin-bottom: 10px;
         font-family: $font-primary;
+        z-index: 10;
+        color: #010A20;
     }
 
     p {
         font-size: 1rem;
-        color: #666666;
+        color: #6F7787;
         margin-bottom: 40px;
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
         font-family: $font-primary;
+        z-index: 10;
     }
 
     .gallery-grid {
@@ -39,8 +43,23 @@
             "ikki tort olti"
             "ikki tort olti";
         gap: 20px;
-        justify-items: center; /* Elementlarni gorizontal markazda joylash */
+        justify-items: center; 
         align-items: center; 
+        @media (max-width: 768px) {
+            width: 50%;
+            margin: 0 auto;
+            grid-template-columns: 180px 180px;
+            grid-template-areas: "bir uch"
+                "bir uch"
+                "bir tort"
+                "bir tort"
+                "ikki tort"
+                "ikki tort"
+                 "besh olti"
+                 "besh olti"
+                 "besh olti";
+            
+        }
         .bir {
             width: 350px;
             height: 500px;
@@ -49,6 +68,11 @@
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            @media (max-width:768px) {
+                width: 180px;
+                height: 250px;
+                
+            }
         }
 
         .ikki {
@@ -59,6 +83,11 @@
             object-fit: cover;            
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            @media (max-width:768px) {
+                width: 180px;
+                height: 150px;
+                
+            }
         }
 
         .uch {
@@ -70,6 +99,11 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             grid-area: uch;
+            @media (max-width:768px) {
+                width: 180px;
+                height: 150px;
+                
+            }
         }
 
         .tort {
@@ -80,6 +114,11 @@
             object-fit: cover;            
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            @media (max-width:768px) {
+                width: 180px;
+                height: 250px;
+                
+            }
         }
 
         .besh {
@@ -90,6 +129,11 @@
             object-fit: cover;            
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            @media (max-width:768px) {
+                width: 180px;
+                height: 150px;
+                
+            }
         }
 
         .olti {            
@@ -100,6 +144,11 @@
             object-fit: cover;            
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            @media (max-width:768px) {
+                width: 180px;
+                height: 150px;
+                
+            }
         }
     }
 }
