@@ -20,18 +20,54 @@ function toggleMenu() {
 
 
 
+let isSearchActive = false; // Qidiruv paneli holatini kuzatish uchun flag
+
+// Qidiruv panelini ochish yoki yopish funksiyasi
 function toggleSearch() {
   const searchBarContainer = document.querySelector('.search-bar-container');
-  searchBarContainer.classList.toggle('active');
+  isSearchActive = !isSearchActive;
+  searchBarContainer.classList.toggle('active', isSearchActive);
 }
 
+// Enter tugmasi bosilganda qidiruv panelini yopish va qidiruvni amalga oshirish
 function hideSearchBarOnEnter(event) {
   if (event.key === 'Enter') {
     const searchBarContainer = document.querySelector('.search-bar-container');
-    searchBarContainer.classList.remove('active'); 
+    searchBarContainer.classList.remove('active');
+    isSearchActive = false;
     document.getElementById("searchForm").submit(); 
   }
 }
+
+// Sahifaning boshqa joyiga bosilganda qidiruv panelini yopish
+document.addEventListener('click', (event) => {
+  const searchBarContainer = document.querySelector('.search-bar-container');
+  const searchIcon = document.querySelector('.search-icon');
+  
+  // Agar bosilgan element qidiruv paneli yoki qidiruv ikonasi bo'lmasa, panelni yopish
+  if (isSearchActive && !searchBarContainer.contains(event.target) && !searchIcon.contains(event.target)) {
+    searchBarContainer.classList.remove('active');
+    isSearchActive = false;
+  }
+});
+
+
+
+
+
+
+
+
+
+
+// Ekran scroll qilinganda qidiruv panelini yopish funksiyasi
+window.addEventListener('scroll', () => {
+  const searchBarContainer = document.querySelector('.search-bar-container');
+  if (isSearchActive) { // Faqat panel ochiq bo'lsa, uni yopish
+    searchBarContainer.classList.remove('active');
+    isSearchActive = false; // Flagni yangilash
+  }
+});
 
 
 

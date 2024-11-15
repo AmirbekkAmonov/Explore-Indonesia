@@ -60,6 +60,25 @@
                  "besh olti";
             
         }
+        .image-wrapper {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; 
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; 
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.8); 
+                }
+            }
+        }
         .bir {
             width: 350px;
             height: 500px;

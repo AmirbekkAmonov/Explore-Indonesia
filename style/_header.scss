@@ -39,11 +39,11 @@
           }
     }
     .search-bar-container {
-        position: absolute;
-        top: 25px; /* Adjust as needed */
-        right: 92px; /* Adjust as needed */
+        position: fixed;
+        top: 25px; 
+        right: 92px; 
         width: 250px;
-        display: none; /* Initially hidden */
+        display: none; 
         z-index: 100;
         transition: all 0.3s ease;
       @media (max-width: 768px) {
@@ -72,12 +72,12 @@
         &.active {
           display: block;
         }
-      }
+   }
       
       .search-icon {
         cursor: pointer;
       }
-      
+     
     &__nav {
         display: flex;
         gap: 5rem;

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="shortcut icon" href="./assets/imgs/images.svg" type="image/x-icon">
   <title>Explore-Indonesia</title>
   <link rel="stylesheet" href="./style/main.css" />
@@ -31,7 +32,7 @@
         <input type="text" class="search-bar" name="q" placeholder="Search..." onkeydown="hideSearchBarOnEnter(event)">
       </form>
     </div>
-    <div class="header__text">
+    <div class="header__text" data-aos="fade-right">
       <div class="header__text--line">
         <div class="header__text--line2">
           <div class="header__text--line3"></div>
@@ -41,7 +42,7 @@
       <h1>Explore <br> Indonesia</h1>
       <a href="/"><button>Start travelling</button></a>
     </div>
-    <div class="info-section">
+    <div class="info-section" data-aos="fade-up">
       <div class="info-section-text">
         <a href="htps://www.facebook.com">Fb</a>
         <a href="htps://www.linkedin.com">In</a>
@@ -196,12 +197,12 @@
           tincidunt arcu tincidunt.</p>
 
         <div class="gallery-grid">
-          <img class="bir" src="./assets/imgs/Image 01.png" alt="Image 1">
-          <img class="ikki" src="./assets/imgs/Image 02.png" alt="Image 2">
-          <img class="uch" src="./assets/imgs/Image 03.png" alt="Image 3">
-          <img class="tort" src="./assets/imgs/Image 04.png" alt="Image 4">
-          <img class="besh" src="./assets/imgs/Image 05.png" alt="Image 5">
-          <img class="olti" src="./assets/imgs/Image 06.png" alt="Image 6">
+          <img  class="image-wrapper bir" src="./assets/imgs/Image 01.png" alt="Image 1">
+          <img class="image-wrapper ikki" src="./assets/imgs/Image 02.png" alt="Image 2">
+          <img class="image-wrapper uch" src="./assets/imgs/Image 03.png" alt="Image 3">
+          <img class="image-wrapper tort" src="./assets/imgs/Image 04.png" alt="Image 4">
+          <img class="image-wrapper besh" src="./assets/imgs/Image 05.png" alt="Image 5">
+          <img class="image-wrapper olti" src="./assets/imgs/Image 06.png" alt="Image 6">
         </div>
       </div>
 
@@ -274,6 +275,10 @@
   <button onclick="topFunction()" id="myBtn" title="Go to top">
     <img src="./assets/icons/up-arrow (1).png" alt="Up Arrow">
 </button>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   <script src="./app/script.js"></script>
 </body>
 
